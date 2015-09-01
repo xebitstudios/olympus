@@ -1,0 +1,9 @@
+About OLYMPUS - RetailNode's Store Layout Generator Service.
+
+The basic parameters needed to set up a custom floor layout and configuration to be used in setting up the model inside the associated OlympusDB database service is as follows:
+	
+	L => The Length of the store
+	B => The breadth of the store
+	S => The number of shelves in the store
+	C => The number of checkout counters in the store
+	

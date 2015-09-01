@@ -1,9 +1,50 @@
-About OLYMPUS - RetailNode's Store Layout Generator Service.
+By - Adetunji Oduyela
+Organization - Madison Analytics
 
-The basic parameters needed to set up a custom floor layout and configuration to be used in setting up the model inside the associated OlympusDB database service is as follows:
+This repository is about OLYMPUS - RetailNode's Store Layout Generator Service.
+
+The basic parameters needed to set up a custom floor layout and configuration
+To use when setting up the model inside the associated OlympusDB database service is as follows:
 	
-	L => The Length of the store
-	B => The breadth of the store
-	S => The number of shelves in the store
-	C => The number of checkout counters in the store
-	
+	L => The floor length of the store
+	B => The floor breadth of the store
+	LS => The number of shelves along the left wall of the store
+	RS => The number of shelves along the right wall of the store
+	BS => The number of shelves along the back wall of the store
+	MSB => The number of shelf rows along the breadth of the store
+	MSL => The number of shelf rows along the length of the store
+	NC => The number of checkout counters in the store
+	ND => The number of multi-directional (entry/exit) doors in the store
+	NZ => The number of zones the store is divided into
+	GR => The number of guest rooms in the store
+
+The default store configuration
+When Olympus is called without passing in any or some parameters
+is shown below:
+
+	L = 20
+	B = 17
+	LS = 12
+	RS = 12
+	BS = 18
+	MSB = 6
+	MSL = 2
+	NC = 5
+	ND = 5
+	NZ = 12
+	GR = 0
+
+What does Olympus do?
+Olympus is mainly meant to deliver a store layout map that helps:
+	- The store product generator and placement service (SPGPS) uses to stock the shelves with products.
+	- The customer shopping path planner service (CSPPS) uses to generate the paths a customer will take when completing a shopping trip.
+	- The store zone configuration service (SZCS) uses in keeping track of zone counts and activities.
+	- The shopper generation service (SGS) will need to instantiate a shopper's initial location upon arrival at the store.
+
+What other service does Olympus interact with?
+Olympus mainly interacts with a single service, OlympusDB. This is the database service that stores Olympus's final configuration, allowing all other services to obtain layout details as needed.
+
+
+
+License
+This content is licensed under the MIT License.

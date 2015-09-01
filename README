@@ -18,7 +18,9 @@ To use when setting up the model inside the associated OlympusDB database servic
 	NZ => The number of zones the store is divided into
 	GR => The number of guest rooms in the store
 
-The default store configuration
+
+What is the default store configuration for Olympus?
+
 When Olympus is called without passing in any or some parameters
 is shown below:
 
@@ -35,6 +37,7 @@ is shown below:
 	GR = 0
 
 What does Olympus do?
+
 Olympus is mainly meant to deliver a store layout map that helps:
 	- The store product generator and placement service (SPGPS) uses to stock the shelves with products.
 	- The customer shopping path planner service (CSPPS) uses to generate the paths a customer will take when completing a shopping trip.
@@ -42,6 +45,7 @@ Olympus is mainly meant to deliver a store layout map that helps:
 	- The shopper generation service (SGS) will need to instantiate a shopper's initial location upon arrival at the store.
 
 What other service does Olympus interact with?
+
 Olympus mainly interacts with a single service, OlympusDB. This is the database service that stores Olympus's final configuration, allowing all other services to obtain layout details as needed.
 
 
